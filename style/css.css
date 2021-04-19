@@ -86,9 +86,21 @@ header nav li button:hover{
 {
     background: white;
 }
+/* boy img  */
+
+#imgboy
+{
+    max-width: 100%;
+    position: absolute;
+    bottom: 10px;
+}
         /* media hamburger and nav  */
 @media (min-width:300px)  and (max-width:768px){
 
+    header
+    {
+        /* background: #000000; */
+    }
     header .continer
     {
         display: grid;
@@ -100,7 +112,7 @@ header nav li button:hover{
     {
         width: 50px;
         height: 50px;
-        z-index: 2;
+        z-index: 20;
         position: absolute;
         right: 0;
         display: grid;
@@ -127,6 +139,7 @@ header nav li button:hover{
         top: 0;
         height: 100vh;
         transition: 0.5s all;
+        z-index: 10;
     }
     header .nav-mobile ul 
     {
@@ -148,6 +161,65 @@ header nav li button:hover{
     {
         background-color: white;
     }
+    /* img boy  */
+    .contact-img-text
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .contact-img-text #imgboy
+    {
+        position: absolute;
+       top: 400px;
+        width: 100%;
+        z-index: 0;
+    }
+    .contact-text
+    {
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #727070;
+        opacity: 0.9;
+        height: 199px;
+        z-index: ;
+    }
+    .contact-text .text
+    {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-text .text h3 
+    {
+        font-size: 2em;
+    }
+    .contact-text .text h2
+    {
+        font-size: 3em;
+    }
+    .contact-text .text .continer-links
+    {
+        margin-top: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 25px;
+    }
+    .contact-text .text .continer-links a
+    {
+        text-decoration: none;
+        color: #000000;
+
+    }
+   
 }
     /* media just show navbar in the big screen  */
 @media (min-width:768px){
@@ -155,14 +227,62 @@ header nav li button:hover{
     {
         display: block;
     }
-}
-#imgboy
-{
-    max-width: 100%;
-    position: absolute;
-    bottom: 10px;
+    .contact-img-text #imgboy
+    {
+        /* top: 22; */
+        right: 0;
+
+    }
+    .contact-text
+    {
+        display: flex;
+        place-items: center;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        margin-left: 10%;
+    }
+    .contact-text .text 
+    {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
     
+    }
+    .contact-text .text h3 
+    {
+        font-size: 35px;
+    }
+    .contact-text .text h2
+    {
+        font-size: 45px;
+    }
+    .contact-text .text p
+    {
+        font-size: 22px;
+    }
+    .contact-text .text .continer-links
+    {
+        margin-top: 3%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 25px;
+    }
+    .contact-text .text .continer-links a
+    {
+        text-decoration: none;
+        color: #000000;
+
+    }
+   
 
 
+}
+
+.contact-text
+{
+    font-family: 'Nanum Gothic', sans-serif;
 
 }
