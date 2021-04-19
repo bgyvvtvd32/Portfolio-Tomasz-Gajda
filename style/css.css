@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif; */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Start header  */
+header
+{
+    background: rgb(215,215,215);
+    background: linear-gradient(108deg, rgba(215,215,215,1) 50%, rgba(0,0,0,1) 50%); 
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+header .continer
+{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding-top: 2%;
+}
+header .continer .logo
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    background-image: url(../img/logo.png);    
+}
+/* Start nav  */
+.nav-desktop
+{
+    grid-column: 4/auto;
+}
+.ul-desktop
+{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+
+}
+header nav ul 
+{
+    list-style: none;
+
+}
+header nav li a
+{
+        text-decoration: none;
+        font-size: 1.4em;
+        color: white;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px #000000;
+}
+header nav li button
+{
+    font-size: 1.4em;
+    background: none;
+    color: white;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 4px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .5s all;
+    border: solid white 1px;
+}
+
+header nav li button:hover{
+    background-color:#d7d7d7;
+    color: #000000;
+
+}
+.hvr-underline-from-center::before
+{
+    background: white;
+}
+        /* media hamburger and nav  */
+@media (min-width:300px)  and (max-width:768px){
+
+    header .continer
+    {
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(3,auto);
+        position: relative;
+    }
+    .hamburger
+    {
+        width: 50px;
+        height: 50px;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        place-items: center;
+        cursor: pointer;
+    }
+    .hamburger span 
+    {
+        width: 100%;
+        height: 7px;
+        background-color: rgb(250, 237, 237);
+    }
+    header .nav-mobile
+    {
+        display: block;
+        position: absolute;
+        background-image: url(../img/Background.png);
+        grid-row: 0/3;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        height: 100vh;
+        transition: 0.5s all;
+    }
+    header .nav-mobile ul 
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      /* margin-top: 5%; */
+      height: 100%;
+     }
+    header .nav-mobile ul li 
+    {
+        width: 100%;
+        display: grid;
+        place-content: center;
+    }
+    .hvr-underline-from-center::before 
+    {
+        background-color: white;
+    }
+}
+    /* media just show navbar in the big screen  */
+@media (min-width:768px){
+    .nav-desktop
+    {
+        display: block;
+    }
+}
+#imgboy
+{
+    max-width: 100%;
+    position: absolute;
+    bottom: 10px;
+    
+
+
+
+}
